@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="SoftdocMusicPlayer.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="RootGrid"  Margin="0,-32,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="headerBackground" Grid.Row="0" Height="355">
+            <Image x:Name="backgroundHost" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Rectangle x:Name="Overlay" Fill="{ThemeResource CustomAcrylicBrush}" />
+        </Grid>
+
+        <Grid x:Name="headerContent" Margin="20,52,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--Connected Image-->
+            <Image x:Name="destinationImage" MaxHeight="250" Source="ms-appx:///Assets/default_album_300.png" VerticalAlignment="Top" Stretch="Uniform" />
+
+            <!--Panel to be coordinated with connected animation-->
+            <StackPanel x:Name="coordinatedPanel" Grid.Column="1" VerticalAlignment="Top" Margin="20,0">
+                <TextBlock x:Name="musicTitle" Foreground="White" Text="Title" Style="{ThemeResource SubheaderTextBlockStyle}" Margin="0,0,0,10" />
+                <TextBlock x:Name="albumArtist" Foreground="White" Text="Artist" Style="{ThemeResource SubtitleTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,0" TextWrapping="WrapWholeWords" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,45,0,0">
+                    <StackPanel Orientation="Horizontal" x:Name="ButtonPanel">
+                        <Button Padding="0" Foreground="White" Style="{ThemeResource TextBlockButtonStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Play" />
+                                <TextBlock Text="Play" Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Button>
+                        <Button Padding="0" Foreground="White" Style="{ThemeResource TextBlockButtonStyle}">
+                            <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                <SymbolIcon Symbol="Add" />
+                                <TextBlock Text="Add" Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Button>
+                        <Button Padding="0" Foreground="White" Style="{ThemeResource TextBlockButtonStyle}">
+                            <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                <SymbolIcon Symbol="More" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel x:Name="moreInfoPanel" Margin="24,32,24,0">
+                <TextBlock Text="What is Lorem Ipsum" Style="{ThemeResource SubtitleTextBlockStyle}" FontWeight="Bold" />
+                <TextBlock Margin="0,10,0,0" TextWrapping="WrapWholeWords">
+                    <Run>
+                        <x:String>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</x:String>
+                    </Run>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

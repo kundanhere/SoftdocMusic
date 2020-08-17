@@ -1,0 +1,160 @@
+﻿<Page
+    x:Class="SoftdocMusicPlayer.Views.ArtistPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoftdocMusicPlayer.Views"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:data="using:SoftdocMusicPlayer.Core.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Style="{ThemeResource PageStyle}">
+
+    <Grid x:Name="RootGrid" Margin="{StaticResource MediumLeftRightMargin}">
+        <GridView x:Name="collectionGridView"
+                    ItemsSource="{x:Bind Collection, Mode=TwoWay}"
+                    HorizontalAlignment="Stretch"
+                    Padding="0,0,0,90"
+                    SelectionMode="None"
+                    IsItemClickEnabled="True">
+            <!--Header starts-->
+            <GridView.Header>
+                <controls:ScrollHeader Mode="QuickReturn">
+                    <!--Container-->
+                    <Grid x:Name="Header" VerticalAlignment="Top" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="54" />
+                        </Grid.RowDefinitions>
+                        <!--Header Title-->
+                        <TextBlock Text="Artists" Style="{StaticResource PageTitleStyle}" Grid.Row="0" />
+                        <!--Title separator-->
+                        <Rectangle HorizontalAlignment="Center" VerticalAlignment="Center" Height="1" Margin="0,16,0,0" Stretch="UniformToFill" Fill="#333333" Grid.Row="1" />
+                        <!--Top bar action buttons-->
+                        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <!--Shuffle button-->
+                            <SymbolIcon Symbol="Shuffle">
+                                <SymbolIcon.RenderTransform>
+                                    <ScaleTransform ScaleX="0.7" ScaleY="0.7" CenterX="0.7" CenterY="9" />
+                                </SymbolIcon.RenderTransform>
+                            </SymbolIcon>
+                            <TextBlock Text="{x:Bind Total, Mode=OneWay}" Margin="{StaticResource SmallRightMargin}" />
+                            <!--Data sorting-->
+                            <Grid Margin="{StaticResource SmallLeftRightMargin}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Sort by:" Grid.Column="0" />
+                                <HyperlinkButton Content="{x:Bind SortingOption.SelectedItem, Mode=OneWay}" VerticalAlignment="Center" Margin="5,0,0,0" Padding="0" Grid.Column="1" Click="DataSort">
+                                    <HyperlinkButton.ContentTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding}" />
+                                        </DataTemplate>
+                                    </HyperlinkButton.ContentTemplate>
+                                </HyperlinkButton>
+                                <ComboBox x:Name="SortingOption" SelectedIndex="0" Margin="0,-5,0,0" Grid.Column="1" Width="0" Height="0" Opacity="0" SelectionChanged="SortingChanged">
+                                    <x:String>Date added</x:String>
+                                    <x:String>A to Z</x:String>
+                                    <x:String>Release Year</x:String>
+                                </ComboBox>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                    <!--Container ends-->
+                </controls:ScrollHeader>
+            </GridView.Header>
+            <!--Header ends-->
+
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="GridViewItem">
+                                <ContentPresenter Content="{TemplateBinding Content}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </GridView.ItemContainerStyle>
+
+            <GridView.Transitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition />
+                </TransitionCollection>
+            </GridView.Transitions>
+
+            <!--Item template-->
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:SongModel">
+                    <Grid Background="Transparent" Margin="8" Height="230" Width="160"
+                          PointerEntered="GridViewItem_PointerEntered"
+                          PointerExited="GridViewItem_PointerExited">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="160" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--Thumbnail container-->
+                                <Ellipse x:Name="ProfileImage" Grid.Column="0" Width="160" Height="160">
+                                    <Ellipse.Fill>
+                                        <!--Thumbnail image-->
+                                        <!--<ImageBrush ImageSource="{x:Bind Thumbnail, Mode=TwoWay}" Stretch="Fill" ImageFailed="Image_ImageFailed" />-->
+                                        <SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Canvas Grid.Column="0" Margin="55,55,0,0" Canvas.ZIndex="1">
+                                    <SymbolIcon Symbol="Contact" Opacity="0.7">
+                                        <SymbolIcon.RenderTransform>
+                                            <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                                        </SymbolIcon.RenderTransform>
+                                    </SymbolIcon>
+                                </Canvas>
+                            </Grid>
+                            <!--Flyer Buttons-->
+                            <StackPanel x:Name="ButtonContainer" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0">
+                                <!--Play button-->
+                                <Button x:Name="PlayBtn" Style="{ThemeResource CustomFlyerAcrylicButton}"
+                                        Margin="0,0,5,0"
+                                        ToolTipService.ToolTip="Play All"
+                                        PointerEntered="element_PointerEntered"
+                                        PointerExited="element_PointerExited"
+                                        Click="PlayBtn_Clicked">
+                                    <Button.Content>
+                                        <SymbolIcon Symbol="Play" />
+                                    </Button.Content>
+                                </Button>
+                                <!--Add to playlist button-->
+                                <Button x:Name="AddBtn" Style="{ThemeResource CustomFlyerAcrylicButton}"
+                                        Margin="5,0,0,0"
+                                        ToolTipService.ToolTip="Add to playlist"
+                                        PointerEntered="element_PointerEntered"
+                                        PointerExited="element_PointerExited">
+                                    <Button.Content>
+                                        <SymbolIcon Symbol="Add">
+                                            <SymbolIcon.RenderTransform>
+                                                <ScaleTransform ScaleX="0.9" ScaleY="0.9" CenterX="9" CenterY="9" />
+                                            </SymbolIcon.RenderTransform>
+                                        </SymbolIcon>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                            <!--Flyer Buttons ends-->
+                        </Grid>
+                        <!--Artist-->
+                        <TextBlock x:Name="ArtistName" Grid.Row="1" FontSize="14" FontWeight="SemiBold" CharacterSpacing="32" MaxWidth="160" MaxHeight="42" TextAlignment="Center" TextWrapping="WrapWholeWords"
+                                    Text="{x:Bind Artist, Mode=OneWay}"
+                                    ToolTipService.ToolTip="{x:Bind Artist, Mode=OneWay}" />
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <!--Ends Item template-->
+        </GridView>
+    </Grid>
+</Page>

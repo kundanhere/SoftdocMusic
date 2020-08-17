@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{4F510531-AC5F-4C7E-B9B0-B6B97F51B2D3}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoftdocMusicPlayer</RootNamespace>
+    <AssemblyName>SoftdocMusicPlayer</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>
+    </PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <PackageCertificateThumbprint>2B3B2478CC6A53D90383959B0952F2CA110599B1</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ksemenenko.ColorThief">
+      <Version>1.1.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp">
+      <Version>7.0.0-preview1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.0.0-preview1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Animations">
+      <Version>7.0.0-preview1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>7.0.0-preview1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
+      <Version>2.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-us\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activation\ActivationHandler.cs" />
+    <Compile Include="Helpers\AuthenticationHelper.cs" />
+    <Compile Include="Helpers\EnumToBooleanConverter.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\Observable.cs" />
+    <Compile Include="Helpers\RelayCommand.cs" />
+    <Compile Include="Helpers\Restricted.cs" />
+    <Compile Include="Helpers\SettingsStorageExtensions.cs" />
+    <Compile Include="Helpers\SortingHelper.cs" />
+    <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Samples\LightInterop\AmbLight.cs" />
+    <Compile Include="Samples\LightInterop\HoverLight.cs" />
+    <Compile Include="Samples\LightInterop\LightInterop.xaml.cs" />
+    <Compile Include="Samples\LightInterop\MaterialBrush.cs" />
+    <Compile Include="Samples\ShadowAdvanced\CompositionShadow.xaml.cs" />
+    <Compile Include="Samples\ShadowAdvanced\ShadowsAdvanced.cs" />
+    <Compile Include="Services\ActivationService.cs" />
+    <Compile Include="Activation\DefaultActivationHandler.cs" />
+    <Compile Include="Services\FirstRunDisplayService.cs" />
+    <Compile Include="Services\LiveTileService.cs" />
+    <Compile Include="Services\LiveTileService.Samples.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\ThemeSelectorService.cs" />
+    <Compile Include="Services\UserDataService.cs" />
+    <Compile Include="ViewModels\AlbumsViewModel.cs" />
+    <Compile Include="ViewModels\MediaViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Views\AlbumsView.xaml.cs">
+      <DependentUpon>AlbumsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArtistView.xaml.cs">
+      <DependentUpon>ArtistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChooseFolderDialog.xaml.cs">
+      <DependentUpon>ChooseFolderDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailedAlbumsView.xaml.cs">
+      <DependentUpon>DetailedAlbumsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DropShadowAnimPage.xaml.cs">
+      <DependentUpon>DropShadowAnimPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstRunDialog.xaml.cs">
+      <DependentUpon>FirstRunDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\FrostedGlassAnimPage.xaml.cs">
+      <DependentUpon>FrostedGlassAnimPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ShyHeader.xaml.cs">
+      <DependentUpon>ShyHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TracksView.xaml.cs">
+      <DependentUpon>TracksView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Samples\LightInterop\LightInterop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ShadowAdvanced\CompositionShadow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ShadowAdvanced\ShadowsAdvanced.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\CustomXamlControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Shell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\_Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\_FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\_Thickness.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AlbumsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArtistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChooseFolderDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetailedAlbumsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\DropShadowAnimPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FirstRunDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\FrostedGlassAnimPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ShyHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TracksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ResourceExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Abstract\Abstract-1.jpg" />
+    <Content Include="Assets\Abstract\Abstract-2.jpg" />
+    <Content Include="Assets\Abstract\Abstract-3.jpg" />
+    <Content Include="Assets\Abstract\Abstract-4.jpg" />
+    <Content Include="Assets\Abstract\Abstract-5.jpg" />
+    <Content Include="Assets\Abstract\Abstract-6.jpg" />
+    <Content Include="Assets\Abstract\Abstract-7.jpg" />
+    <Content Include="Assets\bubblenm.jpg" />
+    <Content Include="Assets\BannerImage\Flume.jpg" />
+    <Content Include="Assets\BannerImage\helix-flume.jpg" />
+    <Content Include="Assets\default_album_300.png" />
+    <Content Include="Assets\Landscapes\Landscape-1.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-10.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-11.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-12.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-13.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-2.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-3.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-4.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-5.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-6.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-7.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-8.jpg" />
+    <Content Include="Assets\Landscapes\Landscape-9.jpg" />
+    <Content Include="Assets\Nature\Nature-1.jpg" />
+    <Content Include="Assets\Nature\Nature-10.jpg" />
+    <Content Include="Assets\Nature\Nature-11.jpg" />
+    <Content Include="Assets\Nature\Nature-12.jpg" />
+    <Content Include="Assets\Nature\Nature-13.jpg" />
+    <Content Include="Assets\Nature\Nature-2.jpg" />
+    <Content Include="Assets\Nature\Nature-3.jpg" />
+    <Content Include="Assets\Nature\Nature-4.jpg" />
+    <Content Include="Assets\Nature\Nature-5.jpg" />
+    <Content Include="Assets\Nature\Nature-6.jpg" />
+    <Content Include="Assets\Nature\Nature-7.jpg" />
+    <Content Include="Assets\Nature\Nature-8.jpg" />
+    <Content Include="Assets\Nature\Nature-9.jpg" />
+    <Content Include="Assets\VisualAssets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\VisualAssets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\VisualAssets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\VisualAssets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\VisualAssets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\VisualAssets\LargeTile.scale-100.png" />
+    <Content Include="Assets\VisualAssets\LargeTile.scale-125.png" />
+    <Content Include="Assets\VisualAssets\LargeTile.scale-150.png" />
+    <Content Include="Assets\VisualAssets\LargeTile.scale-200.png" />
+    <Content Include="Assets\VisualAssets\LargeTile.scale-400.png" />
+    <Content Include="Assets\VisualAssets\SmallTile.scale-100.png" />
+    <Content Include="Assets\VisualAssets\SmallTile.scale-125.png" />
+    <Content Include="Assets\VisualAssets\SmallTile.scale-150.png" />
+    <Content Include="Assets\VisualAssets\SmallTile.scale-200.png" />
+    <Content Include="Assets\VisualAssets\SmallTile.scale-400.png" />
+    <Content Include="Assets\VisualAssets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\VisualAssets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\VisualAssets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\VisualAssets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\VisualAssets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\VisualAssets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\VisualAssets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\VisualAssets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\VisualAssets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\VisualAssets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\VisualAssets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\VisualAssets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\VisualAssets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\VisualAssets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\VisualAssets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\VisualAssets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\VisualAssets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\VisualAssets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\VisualAssets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\VisualAssets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\VisualAssets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="App.config" />
+    <None Include="SoftdocMusicPlayer_TemporaryKey.pfx" />
+    <Compile Include="ViewModels\ChooseFolderDialogViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLibrary\DataAccessLibrary.csproj">
+      <Project>{893a0d10-13ee-40c1-a27e-525d131ca426}</Project>
+      <Name>DataAccessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExpressionBuilder\ExpressionBuilder.csproj">
+      <Project>{22625a95-61ed-469c-b02c-5e6a0b2bf50b}</Project>
+      <Name>ExpressionBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoftdocMusicPlayer.Core\SoftdocMusicPlayer.Core.csproj">
+      <Project>{C18D10CE-DB65-44C6-8EBF-7474AB22226D}</Project>
+      <Name>SoftdocMusicPlayer.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

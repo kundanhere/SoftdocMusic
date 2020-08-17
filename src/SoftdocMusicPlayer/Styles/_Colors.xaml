@@ -1,0 +1,57 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Win10v1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)">
+
+    <SolidColorBrush x:Key="ThemeControlForegroundBaseHighBrush" Color="{ThemeResource SystemBaseHighColor}" />
+
+    <AcrylicBrush x:Key="CustomAcrylicLuminosity" BackgroundSource="HostBackdrop" TintOpacity="0.8" Win10v1903:TintLuminosityOpacity="0.2" TintColor="SkyBlue" FallbackColor="SkyBlue" />
+
+    <!--CustomAcrylicBrush-->
+    <AcrylicBrush x:Key="CustomAcrylicBrush"
+                          BackgroundSource="Backdrop"
+                          TintOpacity="0.7"
+                          TintColor="#FF000000"
+                          FallbackColor="#2B2B2B" />
+
+    <!--Albums flyer button background acrylic brush-->
+    <AcrylicBrush x:Key="AlbumsFlyerButtonBackgroundAcrylic" BackgroundSource="Backdrop" TintOpacity="0.6" Win10v1903:TintLuminosityOpacity="0.6" TintColor="Black" FallbackColor="Gray" />
+
+    <!--Slider thumb background acrylic brush-->
+    <AcrylicBrush x:Key="SliderThumbBackgroundAcrylicBrush" BackgroundSource="Backdrop" TintOpacity="0" FallbackColor="#4E4E4E" />
+
+    <!-- Media Player background acrylic brush -->
+    <AcrylicBrush x:Key="MediaPlayerBakgroundAcrylicBrush" BackgroundSource="Backdrop" TintOpacity="0.75" Win10v1903:TintLuminosityOpacity="0.8" TintColor="#103A3D" FallbackColor="#9C7E98" />
+
+    <!--Navigation panel, "Detailed album page" background acrylic theme brush-->
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                                 BackgroundSource="Backdrop"  TintColor="#88dbe4" TintOpacity="0.4" Win10v1903:TintLuminosityOpacity="0.5" FallbackColor="#d5d5d5" />
+            <AcrylicBrush x:Key="NavigationViewTopPaneBackground"
+                                 BackgroundSource="Backdrop"  TintColor="#88dbe4" TintOpacity="0.4" Win10v1903:TintLuminosityOpacity="0.8" FallbackColor="#d5d5d5" />
+            <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
+                                 BackgroundSource="HostBackdrop" TintColor="#88dbe4" TintOpacity="0.6" Win10v1903:TintLuminosityOpacity="0.9" FallbackColor="#d5d5d5" />
+
+            <AcrylicBrush x:Key="DetailedAlbumPageInAppAcrylic" BackgroundSource="Backdrop" TintOpacity="0.6" TintColor="DarkSlateGray" FallbackColor="#555" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+            <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                                 BackgroundSource="Backdrop"  TintColor="#165D63" TintOpacity="0.6" Win10v1903:TintLuminosityOpacity="0.5" FallbackColor="#444" />
+            <!-- #165D63 -->
+            <AcrylicBrush x:Key="NavigationViewTopPaneBackground"
+                                 BackgroundSource="Backdrop"  TintColor="#165D63" TintOpacity="0.6" Win10v1903:TintLuminosityOpacity="0.8" FallbackColor="#444" />
+            <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
+                                 BackgroundSource="HostBackdrop" TintColor="#165D63" TintOpacity="0.6" Win10v1903:TintLuminosityOpacity="0.9" FallbackColor="#444" />
+
+            <AcrylicBrush x:Key="DetailedAlbumPageInAppAcrylic" BackgroundSource="Backdrop" TintOpacity="0.8" TintColor="Black" FallbackColor="#2B2B2B" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="{ThemeResource SystemColorWindowColor}" />
+            <SolidColorBrush x:Key="NavigationViewTopPaneBackground" Color="{ThemeResource SystemColorWindowColor}" />
+            <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="{ThemeResource SystemColorWindowColor}" />
+
+            <SolidColorBrush x:Key="DetailedAlbumPageInAppAcrylic" Color="{ThemeResource SystemColorWindowColor}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>

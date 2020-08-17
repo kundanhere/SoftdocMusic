@@ -1,0 +1,2 @@
+MainPackage=E:\Microsoft Visual Studio\UWP\SoftdocMusicPlayer\SoftdocMusicPlayer\bin\x86\Release\SoftdocMusicPlayer_1.0.0.0_x86.msix
+SymbolPackage=E:\Microsoft Visual Studio\UWP\SoftdocMusicPlayer\SoftdocMusicPlayer\obj\x86\Release\Symbols\SoftdocMusicPlayer_1.0.0.0_x86.appxsym

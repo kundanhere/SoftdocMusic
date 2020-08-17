@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:genTemplate="http://schemas.microsoft.com/appx/developer/windowsTemplateStudio"
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap mp genTemplate iot uap3">
+
+  <Identity
+    Name="Softdoc.MusicPlayer.UWP.Windows"
+    Publisher="CN=Contoso Software, O=Contoso Corporation, C=US"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="9EB56538-0008-49B5-8FE8-30222304387F" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Softdoc Music</DisplayName>
+    <PublisherDisplayName>Kundan</PublisherDisplayName>
+    <Logo>Assets\VisualAssets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="SoftdocMusicPlayer.App">
+      <uap:VisualElements
+        DisplayName="ms-resource:AppDisplayName"
+        Square150x150Logo="Assets\VisualAssets\Square150x150Logo.png"
+        Square44x44Logo="Assets\VisualAssets\Square44x44Logo.png"
+        Description="ms-resource:AppDescription"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\VisualAssets\Wide310x150Logo.png" Square71x71Logo="Assets\VisualAssets\SmallTile.png" Square310x310Logo="Assets\VisualAssets\LargeTile.png" ShortName="Softdoc Music">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\VisualAssets\SplashScreen.png"  BackgroundColor="#007ddd"/>
+        <uap:LockScreen BadgeLogo="Assets\VisualAssets\BadgeLogo.png" Notification="badge"/>
+      </uap:VisualElements>
+
+      <Extensions>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="internetClient" />
+  <rescap:Capability Name="broadFileSystemAccess" />
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+  
+  </Capabilities>
+
+  <genTemplate:Metadata>
+    <genTemplate:Item Name="generator" Value="Windows Template Studio"/>
+    <genTemplate:Item Name="wizardVersion" Version="v3.5.19310.1" />
+    <genTemplate:Item Name="templatesVersion" Version="v3.5.19310.1" />
+    <genTemplate:Item Name="projectType" Value="Blank" />
+    <genTemplate:Item Name="framework" Value="MVVMBasic" />
+    <genTemplate:Item Name="platform" Value="Uwp" />
+  </genTemplate:Metadata>
+</Package>

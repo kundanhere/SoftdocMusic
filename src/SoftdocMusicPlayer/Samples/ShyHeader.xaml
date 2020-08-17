@@ -1,0 +1,316 @@
+﻿<Page
+    x:Class="SoftdocMusicPlayer.ShyHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoftdocMusicPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Margin="0,-32,0,0"
+    Style="{ThemeResource PageStyle}">
+    <Grid>
+        <GridView x:Name="gridView" Padding="0,0,0,100">
+            <GridView.Header>
+                <Grid x:Name="Header" Height="300" VerticalAlignment="Top">
+                    <Rectangle x:Name="BackgroundRectangle" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                        <Rectangle.Fill>
+                            <ImageBrush x:Name="BackgroundImage" ImageSource="ms-appx:///Assets/AlbumArt/6.jpg" Stretch="UniformToFill" Opacity="0.6" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle x:Name="OverlayRectangle" Fill="#BF6CA2A8" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+                    <!--<Rectangle x:Name="OverlayRectangle" Fill="#BFB0AAA6" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Top" />-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="TextContainer">
+                        <!--<Ellipse x:Name="ProfileImage" Height="150" Width="150" Margin="20,50,20,20">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="ms-appx:///Assets/AlbumArt/3.jpg" Stretch="UniformToFill" />
+                            </Ellipse.Fill>
+                        </Ellipse>-->
+                        <Rectangle x:Name="ProfileImage" Height="150" Width="150" Margin="20,50,20,20">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="ms-appx:///Assets/AlbumArt/6.jpg" Stretch="UniformToFill" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,70,0,0">
+                            <TextBlock x:Name="TitleBlock" Text="Lorem Ipsum" Foreground="White" FontSize="20" />
+                            <TextBlock x:Name="SubtitleBlock" Text="dolor sit amet" Foreground="White" FontSize="10" Margin="0,10,0,0" />
+                            <TextBlock x:Name="Blurb" Foreground="White" FontSize="12" Width="400" TextWrapping="Wrap" Margin="0,20,0,0">
+                                        <Run>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </Run>
+                            </TextBlock>
+                            <TextBlock x:Name="MoreText" Text="More" Foreground="White" Margin="0,10,0,0" />
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
+                                <StackPanel Orientation="Horizontal" x:Name="ButtonPanel">
+                                    <Button Padding="0" Foreground="White" Style="{ThemeResource TextBlockButtonStyle}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <SymbolIcon Symbol="Play" />
+                                            <TextBlock Text="Play" Margin="10,0,0,0" />
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Padding="0" Foreground="White" Style="{ThemeResource TextBlockButtonStyle}">
+                                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                            <SymbolIcon Symbol="Add" />
+                                            <TextBlock Text="Add" Margin="10,0,0,0" />
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Padding="0" Foreground="White" Style="{ThemeResource TextBlockButtonStyle}">
+                                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                            <SymbolIcon Symbol="More" />
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </GridView.Header>
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-1.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-2.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-3.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-4.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-5.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-6.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-7.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-1.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-2.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-3.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-4.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-5.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-6.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-7.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-1.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-2.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-3.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-4.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-5.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-6.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-7.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-1.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-2.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-3.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-4.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-5.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-6.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-7.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-1.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-2.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-3.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-4.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-5.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-6.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+            <Image Source="ms-appx:///Assets/Abstract/Abstract-7.jpg"
+                        Width="200"
+                        Height="200"
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Stretch="UniformToFill" />
+        </GridView>
+    </Grid>
+</Page>
