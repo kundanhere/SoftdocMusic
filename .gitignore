@@ -203,3 +203,4 @@ FakesAssemblies/
 
 # Custom ignores
 project.lock.json
+design/
