@@ -5,7 +5,7 @@
 # Softdoc Music Player
 
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/kundan2001/SoftdocMusic?color=brightgreen&include_prereleases)](https://github.com/kundan2001/SoftdocMusic/releases/latest)
-![GitHub](https://img.shields.io/github/license/kundan2001/SoftdocMusic?label=license)
+[![GitHub](https://img.shields.io/github/license/kundan2001/SoftdocMusic?label=license)](https://github.com/kundanhere/SoftdocMusic/blob/master/LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kundan2001/SoftdocMusic)
 
 This project was originally started as a closed-source and everything was done in-house. Later I decided to move the project on to a new vision: a free and open-source modding platform.
@@ -23,16 +23,16 @@ This project was originally started as a closed-source and everything was done i
   - [Design](#design)
   - [Frameworks](#frameworks)
   - [App features](#app-features)
+- [System requirements](#system-requirements)
+- [How to use SoftdocMusic](#how-to-use-softdocmusic)
+  - [Prepare your environment](#prepare-your-environment)
+  - [Build the sample](#build-the-sample)
+  - [Run the sample](#run-the-sample)
+- [Resources](#resources)
 - [Reporting issues](#reporting-issues)
   - [Known issues](#known-issues)
-- [System requirements](#system-requirements)
-  - [Prepare your environment](#prepare-your-environment)
-- [Build the sample](#build-the-sample)
-- [Run the sample](#run-the-sample)
-  - [Deploying the sample](#deploying-the-sample)
-  - [Deploying and running the sample](#deploying-and-running-the-sample)
-- [Resources](#resources)
 - [Contributing to SoftdocMusic](#contributing)
+- [License](#license)
 
 ## Introduction
 
@@ -100,19 +100,12 @@ Inspired by [Microsoft Groove Music](https://www.microsoft.com/en-us/p/groove-mu
 | [Template studio](https://blogs.windows.com/buildingapps/2017/05/16/announcing-windows-template-studio/)                                                                                                                                          | Theming model <br> <img src="images/ThemeSupported.gif" alt="Theme supported image" width=300>                               |                 [ThemeSelectorService.cs](src/SoftdocMusicPlayer/Services/ThemeSelectorService.cs) |
 | [Template studio](https://blogs.windows.com/buildingapps/2017/05/16/announcing-windows-template-studio/)                                                                                                                                          | User login model <br><img src="images/UserLogin.png" alt="User Login image" width=300>                                       |                     [SettingsViewModel.cs](src/SoftdocMusicPlayer/ViewModels/SettingsViewModel.cs) |
 
-## Reporting issues
-
-### Known Issues
-
-- A number of warnings have not been addressed
-- Things that didn't make it from the design:
-  - Artists detailed page
-  - Search bar
-  - Your groove and Explore section: this will come in a future update to the app
 
 ## System requirements
 
 - Windows 10
+
+## How to use SoftdocMusic
 
 ### Prepare your environment
 
@@ -126,24 +119,25 @@ This sample requires Visual Studio and the Windows 10 Software Development Kit (
 
 Additionally, to receive the latest updates to Windows and the development tools, and to help shape their development, join the [Windows Insider Program](https://insider.windows.com/ 'Become a Windows Insider').
 
-## Build the sample
+### Build the sample
 
 1. If you download the sample, be sure to unzip the entire archive, not just the folder you want to build.
 2. Start Microsoft Visual Studio and select **File > Open > Project/Solution**.
 3. Starting in the folder where you unzipped the sample, go to the src subfolder. Double-click the Visual Studio Solution (.sln) file.
 4. Press Ctrl+Shift+B, or select **Build > Build Solution**.
 
-## Run the sample
+### Run the sample
 
 After opening the Visual Studio solution, set your startup project as **SoftdocMusicPlayer**, the architecture to x64 or x86. The next steps depend on whether you just want to deploy the sample or you want to both deploy and run it.
 
-### Deploying the sample
+1. Deploying the sample
 
-Select **Build > Deploy Solution**.
+    - Select **Build > Deploy Solution**.
 
-### Deploying and running the sample
+2. Deploying and running the sample
 
-To debug the sample and then run it, press F5 or select **Debug > Start Debugging**. To run the sample without debugging, press Ctrl+F5 or select **Debug > Start Without Debugging**.
+    - To debug the sample and then run it, press F5 or select **Debug > Start Debugging**. 
+    - To run the sample without debugging, press Ctrl+F5 or select **Debug > Start Without Debugging**.
 
 ## Resources
 
@@ -151,11 +145,34 @@ To debug the sample and then run it, press F5 or select **Debug > Start Debuggin
 - [Fluent Design System](https://docs.microsoft.com/en-us/windows/apps/fluent-design-system)
 - [Design and UI](https://docs.microsoft.com/en-us/windows/uwp/design/)
 
+## Reporting issues
+
+If you've identified an issue, first search through the [list of existing issues](https://github.com/kundanhere/SoftdocMusic/issues) on the repo. If you are unable to find a similar issue, then create a new one. Supply as much information you can to reproduce the problematic behavior. Also, include any additional insights like the behavior you expect.
+
+### Known Issues
+
+- A number of warnings have not been addressed
+- Things that didn't make it from the design:
+  - Artists detailed page
+  - Search bar
+  - Your groove and Explore section: this will come in a future update to the app
+
 ## Contributing
 
-While I expect to at a later date, this project is not currently accepting contributions. For now, if you have any feedback or questions, please open an Issue on GitHub.
+Thank you for your interest in contributing to SoftdocMusic! Before you begin writing code, it is important that you share your intention, based on the type of contribution:
 
-Contact at [kundan124@hotmail.com](mailto:kundan124@hotmail.com) with any additional questions or comments.
+1. You want to propose a new feature and implement it.
+    - Post about your intended feature in an [issue](https://github.com/kundanhere/SoftdocMusic/issues), and we shall discuss the design and implementation. Once we agree that the plan looks good, go ahead and implement it.
+2. You want to implement a feature or bug-fix for an outstanding issue.
+    - Search for your issue in the [issue list](https://github.com/kundanhere/SoftdocMusic/issues).
+    - Pick an issue and comment that you'd like to work on the feature or bug-fix.
+    - If you need more context on a particular issue, please ask and I will provide. 
 
-Copyright &copy; Kundan Gupta. All rights reserved.
+
+Once you implement and test your feature or bug-fix, please submit a Pull Request to https://github.com/kundanhere/SoftdocMusic.
+
+If you have any feedback or questions, please open an Issue on GitHub. Contact at [kundan124@hotmail.com](mailto:kundan124@hotmail.com) with any additional questions or comments.
+
+## License
+
 This program/project is and its use is subject to the [MIT License](LICENSE)
